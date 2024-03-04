@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.wesleyluan.blog.domain.User;
 import com.wesleyluan.blog.repository.UserRepository;
 import com.wesleyluan.dto.UserDTO;
+import com.wesleyluan.dto.UserInsertDTO;
 
 @Service
 public class UserService {
@@ -29,11 +30,18 @@ public class UserService {
 
     }
 
-    public User save(User entity) {
-        User user = userRepository.findByEmail(entity.getEmail());
+    public UserDTO save(UserInsertDTO dto) {
+        User user = userRepository.findByEmail(dto.getEmail());
         if (user != null) {
             return null;
         }
-        return userRepository.save(entity);
+
+        User obj = new User();
+        obj.setName(dto.getName());
+        obj.setEmail(dto.getEmail());
+        obj.setPassword(dto.getPassword());
+        obj = userRepository.save(obj);
+
+        return new UserDTO(obj);
     }
 }

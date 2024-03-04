@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wesleyluan.blog.domain.User;
 import com.wesleyluan.blog.service.UserService;
 import com.wesleyluan.dto.UserDTO;
+import com.wesleyluan.dto.UserInsertDTO;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,8 +30,9 @@ public class UserController {
     }
 
     @PostMapping
-    public User save(@RequestBody User obj) {
-        return  userService.save(obj);
+    public UserDTO save(@RequestBody UserInsertDTO dto) {
+       UserDTO obj = userService.save(dto);
+       return obj;
     }
     
     
