@@ -1,4 +1,4 @@
-package com.wesleyluan.dto;
+package com.wesleyluan.blog.dto;
 
 import com.wesleyluan.blog.domain.User;
 

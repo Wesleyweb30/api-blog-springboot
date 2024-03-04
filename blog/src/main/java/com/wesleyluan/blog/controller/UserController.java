@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.wesleyluan.blog.domain.User;
+import com.wesleyluan.blog.dto.UserDTO;
+import com.wesleyluan.blog.dto.UserInsertDTO;
 import com.wesleyluan.blog.service.UserService;
-import com.wesleyluan.dto.UserDTO;
-import com.wesleyluan.dto.UserInsertDTO;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

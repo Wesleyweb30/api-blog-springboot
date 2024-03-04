@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.wesleyluan.blog.domain.User;
+import com.wesleyluan.blog.dto.UserDTO;
+import com.wesleyluan.blog.dto.UserInsertDTO;
 import com.wesleyluan.blog.repository.UserRepository;
-import com.wesleyluan.dto.UserDTO;
-import com.wesleyluan.dto.UserInsertDTO;
 
 @Service
 public class UserService {
